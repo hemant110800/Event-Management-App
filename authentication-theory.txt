@@ -1,0 +1,38 @@
+Authentication is needed if content should be protected i.e content should not be accessible by everyone.
+
+Client  ---sends request (with user credentials) ----->>>>>---------------------  Server
+        ----<<<<<<<<<<<<<<<<-----validate credentials and access granted--------
+
+Two ways for Authentication:- 
+
+1)Server side sessions
+2)Authentication Tokens
+
+1)Server side sessions:-
+ >> Store some unique indentifier on server, and send same identifier to client
+ >> Client sends identifier along with requests to protected resources.
+ >> Server can check if identifier is valid(= previously issued by server to client)
+ 
+****Need for this is like backend should tighly couple with frontend and should store client information at server end**
+
+In react , we mostly have decoupled backend which is loosely coupled to frontend. Most react apps are SPAs that are served 
+by a server that decouples from backend. SPAs handles routing (on Client side) and only talks to backend if it needs data or
+needs to change data. 
+
+>>React side server doesnt care about the client ,it doesnt store client related data.
+>>A decoupled backend is served by different server than reactfrontend app.
+>>Backend prvides various resources routes to which client app may communicate.
+
+2) Authentication Tokens
+
+>>After user sent valid credentials to server, we create (but don't store) "permission" token(string created through some algorithm and it conains some information) 
+on server and send it to client.
+
+>>Speciality of token is like it validity can be checked and proven by backend that created that token because token is created
+by some private key which is known by backend
+
+>>Client attaches token to future requests for protected resurces
+>> Server can then verify the attached token, validate it and see that if it's same token created at backend, and if it same 
+then backend provides access to proected resources.
+
+We are using JWT for tokens
