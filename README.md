@@ -32,3 +32,10 @@ If user is not authenticated then we are blocking some actions from application,
 
 ![image](https://github.com/hemant110800/Event-Management-App/assets/48346161/c5e6b476-06d3-4739-9352-33d247f1e556)
 
+**Tech Used**
+
+**FrontEnd**:- React, react-router-dom , react-router,HTML , CSS , Javacript,  handling all route errors in Error Wrapper Component and using concepts of loaders , action etc in routers and hooks like useSubmit, useLoaderData, useActionData, useRouterError, ReactRouter etc from react-router-dom.
+
+**BackEnd:**:- NodeJs, ExpressJs, JWT , File handling , Express Router, validating event data and user related data at backend and on successful validations creating a token through JWT at login or signup api and sending to frontend.
+
+**DataBase**:- Using JSON files like events.json etc at backend.
