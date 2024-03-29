@@ -24,7 +24,7 @@ function EventItem({ event }) {
       <p>{event.description}</p>
       {authLoad && (
         <menu className={classes.actions}>
-          <Link to="edit">Edit</Link>
+          <Link to="edit" style={{color:"pink"}}>Edit</Link>
           <button onClick={startDeleteHandler}>Delete</button>
         </menu>
       )}
